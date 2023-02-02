@@ -23,7 +23,7 @@ public class PlayerControllerX : MonoBehaviour
     private float yRange = 14f;
 
     private int points; //points counter
-
+    private int specialPoints = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -92,7 +92,7 @@ public class PlayerControllerX : MonoBehaviour
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject); //the money are destroyed
             points++;   //when money is collected, the player earns points
-            Debug.Log("Congratulations, you have win 5 more points!");
+            Debug.Log("Congratulations, you have win:" + points * 5);
         }
 
         else if (other.gameObject.CompareTag("Ground"))
