@@ -83,7 +83,16 @@ public class PlayerControllerX : MonoBehaviour
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject); //the money are destroyed
             points++;   //when money is collected, the player earns points
-            Debug.Log("Congratulations, you have win a point!");
+            Debug.Log("Congratulations, you have win:" + points);
+        }
+
+        else if (other.gameObject.CompareTag("bigMoney"))
+        {
+            fireworksParticle.Play();
+            playerAudio.PlayOneShot(moneySound, 1.0f);
+            Destroy(other.gameObject); //the money are destroyed
+            points++;   //when money is collected, the player earns points
+            Debug.Log("Congratulations, you have win 5 more points!");
         }
 
         else if (other.gameObject.CompareTag("Ground"))
