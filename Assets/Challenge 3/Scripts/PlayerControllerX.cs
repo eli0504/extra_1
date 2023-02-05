@@ -23,7 +23,6 @@ public class PlayerControllerX : MonoBehaviour
     private float yRange = 14f;
 
     private int points; //points counter
-    private int specialPoints = 5;
 
     // Start is called before the first frame update
     void Start()

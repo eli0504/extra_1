@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManagerX : MonoBehaviour
+public class Spawn2 : MonoBehaviour
 {
     public GameObject[] objectPrefabs;
     private float startDelay = 2;
@@ -22,9 +22,9 @@ public class SpawnManagerX : MonoBehaviour
     void SpawnObjects()
     {
         // Set random spawn location and random object index
-        Vector3 spawnLocation = new Vector3(30, Random.Range(5, 15), 0);
+        Vector3 spawnLocation = new Vector3(-11, Random.Range(5, 15), 0);
         int index = Random.Range(0, objectPrefabs.Length);
-        
+
 
         // If game is still active, spawn new object
         if (!playerControllerScript.gameOver)

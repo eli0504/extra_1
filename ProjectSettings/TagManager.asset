@@ -9,6 +9,7 @@ TagManager:
   - Background
   - Ground
   - bigMoney
+  - bigMoney2
   layers:
   - Default
   - TransparentFX

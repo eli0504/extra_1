@@ -1,12 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveLeftX : MonoBehaviour
+public class MoveRight : MonoBehaviour
 {
     public float speed; //velocity variable
     private PlayerControllerX playerControllerScript;
-    private float leftBound = -10;
+    private float rightBound = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -20,24 +20,23 @@ public class MoveLeftX : MonoBehaviour
         // If game is not over, move to the left
         if (!playerControllerScript.gameOver)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
+            transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
         }
 
         // If object goes off screen that is NOT the background, destroy it
-        if (transform.position.x < leftBound && gameObject.CompareTag("Bomb"))
+        if (transform.position.x < rightBound && gameObject.CompareTag("Bomb"))
         {
             Destroy(gameObject);
         }
 
-        if (transform.position.x < leftBound && gameObject.CompareTag("Money"))
+        if (transform.position.x < rightBound && gameObject.CompareTag("Money"))
         {
             Destroy(gameObject);
         }
 
-        if (transform.position.x < leftBound && gameObject.CompareTag("bigMoney"))
+        if (transform.position.x < rightBound && gameObject.CompareTag("bigMoney"))
         {
             Destroy(gameObject);
         }
-
     }
 }
